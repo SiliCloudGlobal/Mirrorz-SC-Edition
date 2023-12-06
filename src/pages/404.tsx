@@ -60,22 +60,22 @@ export default function NotFoundPage() {
           <h1 className={styles('title')}>404 Page Not Found</h1>
           <article className={styles('content')}>
             <Paragraph>
-              你当前请求的页面不存在。
+              The page you are currently requesting does not exist.
             </Paragraph>
             <Paragraph>
-              如果你正在寻找一个软件镜像的使用帮助，很有可能这篇文档还没有完成。
+              If you are looking for usage instructions for a software mirror, it's quite possible that this document has not been completed yet.
             </Paragraph>
             <Paragraph>
-              你可以尝试使用
+              You can try using the   
               {' '}
               <button onClick={handleSearchButtonClick} className={styles('link')} type="button">
-                搜索
+                Search
               </button>
               {' '}
-              找到你想要查看的内容，或者 <Link href="/" className={styles('link')}>返回首页</Link>。
+              to find the content you want to view, or return to the <Link href="/" className={styles('link')}>Homepage</Link>。
             </Paragraph>
             <Paragraph>
-              你也可以 <ExternalLink href={issueUrl} className={styles('link')}>通过 GitHub Issue 反馈这个问题</ExternalLink>。
+              You can also report issues via <ExternalLink href={issueUrl} className={styles('link')}> GitHub </ExternalLink>。
             </Paragraph>
           </article>
         </div>

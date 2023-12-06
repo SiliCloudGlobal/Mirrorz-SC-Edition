@@ -52,10 +52,10 @@ export default function ServerErrorPage() {
           <h1 className={styles('title')}>500 Internal Server Error</h1>
           <article className={styles('content')}>
             <Paragraph>
-              服务器在处理你的请求时发生了错误。
+              The server encountered an error while processing your request.
             </Paragraph>
             <Paragraph>
-              你也可以 <ExternalLink href={issueUrl} className={styles('link')}>通过 GitHub Issue 反馈这个问题</ExternalLink>，或者 <Link href="/" className={styles('link')}>返回首页</Link>。
+              You can also report issues via <ExternalLink href={issueUrl} className={styles('link')}>GitHub</ExternalLink>, or return to the <Link href="/" className={styles('link')}>Homepage</Link>.
             </Paragraph>
           </article>
         </div>

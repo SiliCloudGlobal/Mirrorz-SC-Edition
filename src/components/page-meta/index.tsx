@@ -43,30 +43,30 @@ export default function MetadataCard() {
   return (
     <div className={styles('main')}>
       <p className={styles('p')}>
-        <span className={styles('bold')}>这个页面的内容有问题？</span>
+        <span className={styles('bold')}>Is there an issue with the content on this page?</span>
         <ExternalLink href={issueUrl} className={styles('link')}>
-          在 GitHub Issue 反馈
+          Report via GitHub Issue
         </ExternalLink>
       </p>
       {/** TODO: Contributing Guide */}
       <p className={styles('p')}>
-        <span className={styles('bold')}>想完善这个页面？</span>
+        <span className={styles('bold')}>Would you like to improve/enhance this page?</span>
         <ExternalLink className={styles('link')} href="#">
-          查看我们的贡献指南
+          Check out our contribution guidelines.
         </ExternalLink>，
         <ExternalLink className={styles('link')} href={`https://github.com/mirrorz-org/mirrorz-help/blob/master/contents/${meta.file}`}>
-          在 GitHub 上查看此页的源代码
+          View the source code of this page on GitHub.
         </ExternalLink>
       </p>
       <p className={styles('p')}>
         <span className={styles('bold')}>
-          本页面的全部内容在
+          All content on this page is provided under the terms of the
           {' '}
           <ExternalLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" className={styles('link')}>
             CC BY-NC-SA 4.0
           </ExternalLink>
           {' '}
-          协议之条款下提供，附加条款亦可能应用。
+          license, additional terms may also apply.
         </span>
       </p>
     </div>

@@ -66,12 +66,12 @@ export const SelectedMirrorProvider = ({ children, cname }: React.PropsWithChild
   useLayoutEffect(() => {
     if (invalid && cname && router.query.mirror) {
       setDialog({
-        title: '提示',
+        title: 'Notice',
         content: (
           <>
-            您当前试图使用 {router.query.mirror} 镜像站，但是该镜像站似乎并没有提供 {cname} 的镜像。
+            You are currently trying to use the {router.query.mirror} mirror site, but it appears that this mirror site does not provide a mirror for {cname}.
             <br />
-            如果你有任何疑问，请通过 <ExternalLink href={issueUrl} className={styles('link')}>通过 GitHub Issue 向我们反馈这个问题</ExternalLink>。
+            If you have question, please report issues via <ExternalLink href={issueUrl} className={styles('link')}>GitHub</ExternalLink>。
           </>
         )
       });

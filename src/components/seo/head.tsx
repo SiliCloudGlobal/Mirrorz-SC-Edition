@@ -34,8 +34,8 @@ export default function SeoHead({
     () => [
       title,
       description,
-      '镜像使用帮助',
-      'MirrorZ Help 致力于成为一个开源、开放、且持续更新的开源软件镜像的帮助文档整合站点，旨在帮助高校间推广开源软件的使用。'
+      'Mirror Usage Guide',
+      'MirrorZ Help is dedicated to becoming a centralized platform for integrating documentation related to open-source software mirrors. It is open, transparent, and continuously updated, with the aim of promoting the use of open-source software among universities.'
     ].filter(Boolean).join(' - '),
     [description, title]
   );

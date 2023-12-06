@@ -137,56 +137,56 @@ export default function HomePage() {
         </div>
         <section>
           <p className={styles('paragraph')}>
-            MirrorZ Help 致力于成为一个开源、开放、且持续更新的开源软件镜像的帮助文档整合站点，旨在帮助高校间推广开源软件的使用。
+            MirrorZ Help is committed to becoming a centralized platform for integrating open-source software mirror documentation that is open, transparent, and continuously updated. Its goal is to facilitate the dissemination and promotion of open-source software usage among universities.
           </p>
-          <h2 className={styles('h2')}>热门文档</h2>
+          <h2 className={styles('h2')}>Popular Doc</h2>
           <div className={styles('featured_docs')}>
             <Link href="/ubuntu/" className={styles('card')}>
               <IconUbuntu className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                Ubuntu 软件仓库镜像使用帮助
+                Ubuntu Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/debian/" className={styles('card')}>
               <IconDebian className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                Debian 软件仓库镜像使用帮助
+                Debian Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/archlinux/" className={styles('card')}>
               <IconArchLinux className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                Arch Linux 软件仓库镜像使用帮助
+                Arch Linux Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/fedora/" className={styles('card')}>
               <IconFedora className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                Fedora 软件仓库镜像使用帮助
+                Fedora Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/opensuse/" className={styles('card')}>
               <IconOpenSUSE className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                openSUSE 软件仓库镜像使用帮助
+                openSUSE Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/centos/" className={styles('card')}>
               <IconCentOS className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                CentOS 软件仓库镜像使用帮助
+                CentOS Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/gentoo/" className={styles('card')}>
               <IconGentoo className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                Gentoo 软件仓库镜像使用帮助
+                Gentoo Repository Mirror Usage Guide
               </h3>
             </Link>
             <Link href="/pypi/" className={styles('card')}>
               <IconPython className={styles('brand_icon')} />
               <h3 className={styles('card_title')}>
-                PyPI 软件仓库镜像使用帮助
+                PyPI Repository Mirror Usage Guide
               </h3>
             </Link>
           </div>
