@@ -14,7 +14,7 @@ module.exports = withBundleAnalyzer(withStyle9({
 })({
   trailingSlash: true,
   reactStrictMode: true,
-  output: 'export',
+  /*output: 'export',*/
   experimental: {
     workerThreads: true,
     optimizeCss: process.env.NODE_ENV === 'production' ? {
