@@ -1,11 +1,11 @@
 ---
-title: Debian 软件仓库镜像使用帮助
+title: Debian Repo Mirrors Usage Guide
 cname: 'debian'
 ---
 
-一般情况下，将 `/etc/apt/sources.list` 文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为镜像地址即可。
+In general, replace the default Debian source address `http://deb.debian.org/` with the mirror address in the `/etc/apt/sources.list` file.
 
-Debian Buster 以上版本默认支持 HTTPS 源。如果遇到无法拉取 HTTPS 源的情况，请先使用 HTTP 源并安装：
+Debian Buster and later versions default to supporting HTTPS sources. If you encounter issues fetching HTTPS sources, please use HTTP sources first and then proceed with the installation.
 
 <CodeBlock>
 ```shell
@@ -18,7 +18,7 @@ Debian Buster 以上版本默认支持 HTTPS 源。如果遇到无法拉取 HTTP
   filepath="/etc/apt/sources.list"
   menus={[
     {
-      title: 'Debian 版本',
+      title: 'Debian version',
       items: [
         ['Debian 12 (bookworm)', { release_name: 'bookworm', security: '-security', is_sid: '', has_backports: '', has_nfw: ' non-free-firmware' }],
         ['Debian 11 (bullseye)', { release_name: 'bullseye', security: '-security', is_sid: '', has_backports: '', has_nfw: '' }],
@@ -28,24 +28,24 @@ Debian Buster 以上版本默认支持 HTTPS 源。如果遇到无法拉取 HTTP
       ]
     },
     {
-      title: '启用源码镜像',
+      title: 'Enable Source Mirror',
       items: [
-        ['否', { enable_source: '# ' }],
-        ['是', { enable_source: '' }],
+        ['N', { enable_source: '# ' }],
+        ['Y', { enable_source: '' }],
       ]
     },
     {
-      title: '使用官方安全更新软件源',
+      title: 'Use official security repo source',
       items: [
-        ['是', { security_mirror: '# ', security_official: '' }],
-        ['否', { security_mirror: '', security_official: '# ' }],
+        ['Y', { security_mirror: '# ', security_official: '' }],
+        ['N', { security_mirror: '', security_official: '# ' }],
       ]
     }
   ]}
 >
 
 ```properties
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# Source code mirrors are commented out by default to enhance apt update speed. Uncomment if necessary.
 deb {{http_protocol}}{{mirror}}/ {{release_name}} main contrib non-free{{has_nfw}}
 {{enable_source}}deb-src {{http_protocol}}{{mirror}}/ {{release_name}} main contrib non-free{{has_nfw}}
 
@@ -64,9 +64,9 @@ deb {{http_protocol}}{{mirror}}/ {{release_name}} main contrib non-free{{has_nfw
 
 </CodeBlock>
 
-为了方便快速配置，此处一并附上了 debian-security 的配置，一般来说，镜像站会同时提供 debian-security，截至写文档时，DNUI、HIT 与 NYIST 未提供该镜像，为了更准确的信息您可以前往 [Debian Security 帮助](/debian-security/) 确认。
+For convenient and quick configuration, here is the configuration for debian-security as well. In general, mirror sites usually provide debian-security. As of the document's writing, DNUI, HIT, and NYIST do not offer this mirror. For more accurate information, you can visit [Debian Security Help](/debian-security/) to confirm.
 
-不过，一般来说，为了更及时地获得安全更新，不推荐使用镜像站安全更新软件源，因为镜像站往往有同步延迟。参考 https://www.debian.org/security/faq.en.html#mirror
+However, generally speaking, for more timely access to security updates, it is not recommended to use mirror sites for security update software sources, as mirror sites often have synchronization delays. Refer to https://www.debian.org/security/faq.en.html#mirror
 
 > The purpose of security.debian.org is to make security updates available as quickly and easily as possible.
 >
@@ -74,29 +74,14 @@ deb {{http_protocol}}{{mirror}}/ {{release_name}} main contrib non-free{{has_nfw
 
 ### Connection reset by peer
 
-在 apt 2.1.9 及以后的版本中，apt 的 HTTP Pipelining 特性与 Nginx 服务器疑似存在一定的不兼容问题，可能导致高带宽从镜像站下载大量软件包
-（例如系统升级）时出现偶发的 Connection reset by peer 错误
-（详见 [Debian bug #973581](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=973581)）。
+In apt version 2.1.9 and later, there seems to be some compatibility issues between apt's HTTP Pipelining feature and Nginx servers, which may result in high bandwidth downloading a large number of packages from the mirror site.
+Occasional "Connection reset by peer" errors may occur during operations like system upgrades.
+(Detail [Debian bug #973581](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=973581)).
 
-目前，用户可以通过关闭 HTTP Pipelining 特性解决此问题。
-如果需要关闭，可以在使用 `apt` 命令时加上 `-o Acquire::http::Pipeline-Depth=0` 参数，
-或使用以下命令将相关设置加入 apt 系统配置中：
+Currently, users can resolve this issue by disabling the HTTP Pipelining feature. 
+
+If needed, you can disable it by adding the parameter `-o Acquire::http::Pipeline-Depth=0` when using the `apt` command, or by using the following command to add the relevant settings to the apt system configuration:
 
 ```bash
 echo "Acquire::http::Pipeline-Depth \"0\";" > /etc/apt/apt.conf.d/99nopipelining
 ```
-
-## OpenMediaVault
-
-本节供 [OpenMediaVault 帮助](/OpenMediaVault/)使用。
-
-<CodeBlock>
-
-```bash
-omv-env set OMV_APT_KERNEL_BACKPORTS_REPOSITORY_URL "{{http_protocol}}{{mirror}}"
-omv-env set OMV_APT_SECURITY_REPOSITORY_URL "{{http_protocol}}{{mirror}}-security"
-```
-
-</CodeBlock>
-
-关于 debian-security 可以参考上文的说明。

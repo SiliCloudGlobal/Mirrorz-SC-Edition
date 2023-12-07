@@ -1,14 +1,14 @@
 ---
-title: Debian Security 软件仓库镜像使用帮助
+title: Debian Security Repo Mirrors Usage Guide
 cname: 'debian-security'
 ---
 
-一般情况下，将 `/etc/apt/sources.list` 文件中 Debian 默认的源地址 `http://security.debian.org/` 替换为镜像地址即可。
+In general, replace the default Debian source address `http://security.debian.org/` with the mirror address in the `/etc/apt/sources.list` file.
 
 <CodeBlock
   menus={[
     {
-      title: 'Debian 版本',
+      title: 'Debian version',
       items: [
         ['Debian 11 (bullseye)', { release_name: 'bullseye', security: '-security', is_sid: '', has_backports: '', has_nfw: ''  }],
         ['Debian 12 (bookworm)', { release_name: 'bookworm', security: '-security', is_sid: '', has_backports: '', has_nfw: ' non-free-firmware'  }],
@@ -18,17 +18,17 @@ cname: 'debian-security'
       ]
     },
     {
-      title: '启用源码镜像',
+      title: 'Enable Source Mirror',
       items: [
-        ['否', { enable_source: '# ' }],
-        ['是', { enable_source: '' }],
+        ['N', { enable_source: '# ' }],
+        ['Y', { enable_source: '' }],
       ]
     }
   ]}
 >
 
 ```properties
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# By default, source code mirrors are commented out to improve apt update speed. Uncomment them if needed.
 {{is_sid}}deb {{http_protocol}}{{mirror}} {{release_name}}{{security}} main contrib non-free{{has_nfw}}
 {{is_sid}}{{enable_source}}deb-src {{http_protocol}}{{mirror}} {{release_name}}{{security}} main contrib non-free{{has_nfw}}
 ```

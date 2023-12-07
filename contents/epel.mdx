@@ -1,15 +1,14 @@
 ---
-title: EPEL 软件仓库镜像使用帮助
+title: EPEL Repo Mirrors Usage Guide
 cname: 'epel'
 ---
 
-EPEL(Extra Packages for Enterprise Linux) 是由 Fedora Special Interest Group 维护的 Enterprise Linux（RHEL、CentOS）中经
-常用到的包。
+"EPEL (Extra Packages for Enterprise Linux) is a collection of commonly used packages for Enterprise Linux (RHEL, CentOS), maintained by the Fedora Special Interest Group."
 
 
-下面以 CentOS 7 为例讲解如何使用本镜像站的 epel 镜像。CentOS 8 或 CentOS Stream 同样可用该方法。
+"Here, we'll illustrate how to use the EPEL mirror from this repository, taking CentOS 7 as an example. The same method is applicable to CentOS 8 or CentOS Stream."
 
-首先从 CentOS Extras 这个源里安装 epel-release：
+Start by installing epel-release from the CentOS Extras repository:
 
 <CodeBlock>
 ```shell
@@ -17,7 +16,7 @@ EPEL(Extra Packages for Enterprise Linux) 是由 Fedora Special Interest Group �
 ```
 </CodeBlock>
 
-用如下命令自动替换：（修改自 [https://github.com/tuna/issues/issues/687](https://github.com/tuna/issues/issues/687)）
+Automatically replace with the following command: (modified from [https://github.com/tuna/issues/issues/687](https://github.com/tuna/issues/issues/687))
 
 <CodeBlock>
 
@@ -31,7 +30,7 @@ EPEL(Extra Packages for Enterprise Linux) 是由 Fedora Special Interest Group �
 
 </CodeBlock>
 
-修改结果如下：（仅供参考，不同版本可能不同）
+"Modified results are as follows: (for reference only, may vary in different versions)"
 
 <CodeBlock>
 
@@ -66,4 +65,4 @@ gpgcheck=1
 
 </CodeBlock>
 
-运行 `yum update` 测试一下吧。
+Give it a try by running 'yum update'.

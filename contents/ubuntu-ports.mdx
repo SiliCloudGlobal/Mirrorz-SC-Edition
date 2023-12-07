@@ -1,18 +1,16 @@
 ---
-title: Ubuntu Ports 软件仓库镜像使用帮助
+title: Ubuntu Ports Repo Mirrors Usage Guide
 cname: 'ubuntu-ports'
 ---
 
-对于 Ubuntu 不再支持的版本，请参考 [Ubuntu 旧版本帮助](/ubuntu-old-releases/)。
-
-Ubuntu 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用选择的软件源镜像。
+Backup and replace /etc/apt/sources.list with the provided content to use the selected mirror for Ubuntu software repositories.
 
 <CodeBlock
   enableQuickSetup
   filepath="/etc/apt/sources.list"
   menus={[
     {
-      title: 'Ubuntu 版本',
+      title: 'Ubuntu Version',
       items: [
         ['22.04 LTS', { release_name: 'jammy' }],
         ['23.04', { release_name: 'lunar' }],
@@ -24,31 +22,31 @@ Ubuntu 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的�
       ]
     },
     {
-      title: '使用官方安全更新软件源',
+      title: 'Use official security update software sources',
       items: [
-        ['是', { security_mirror: '# ', security_official: '' }],
-        ['否', { security_mirror: '', security_official: '# ' }],
+        ['Y', { security_mirror: '# ', security_official: '' }],
+        ['N', { security_mirror: '', security_official: '# ' }],
       ]
     },
     {
-      title: '启用 proposed',
+      title: 'Enable proposed',
       items: [
-        ['否', { enable_proposed: '# ' }],
-        ['是', { enable_proposed: '' }],
+        ['N', { enable_proposed: '# ' }],
+        ['Y', { enable_proposed: '' }],
       ]
     },
     {
-      title: '启用源码镜像',
+      title: 'Enable source mirrors',
       items: [
-        ['否', { enable_source: '# ' }],
-        ['是', { enable_source: '' }],
+        ['N', { enable_source: '# ' }],
+        ['Y', { enable_source: '' }],
       ]
     },
   ]}
 >
 
 ```properties
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# Source mirrors are commented out by default to speed up apt update. Uncomment if needed.
 deb {{http_protocol}}{{mirror}}/ {{release_name}} main restricted universe multiverse
 {{enable_source}}deb-src {{http_protocol}}{{mirror}}/ {{release_name}} main restricted universe multiverse
 deb {{http_protocol}}{{mirror}}/ {{release_name}}-updates main restricted universe multiverse
@@ -62,11 +60,11 @@ deb {{http_protocol}}{{mirror}}/ {{release_name}}-backports main restricted univ
 {{security_official}}deb http://ports.ubuntu.com/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
 {{security_official}}{{enable_source}}deb-src http://ports.ubuntu.com/ubuntu-ports/ {{release_name}}-security main restricted universe multiverse
 
-# 预发布软件源，不建议启用
+# Pre-release software sources, not recommended for enablement.
 {{enable_proposed}}deb {{http_protocol}}{{mirror}}/ {{release_name}}-proposed main restricted universe multiverse
 {{enable_proposed}}{{enable_source}}deb-src {{http_protocol}}{{mirror}}/ {{release_name}}-proposed main restricted universe multiverse
 ```
 
 </CodeBlock>
 
-因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
+Due to mirror synchronization delays, replacing the security source is not recommended as it may prevent timely checks and installations of the latest security updates in a production environment.

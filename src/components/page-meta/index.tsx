@@ -43,24 +43,24 @@ export default function MetadataCard() {
   return (
     <div className={styles('main')}>
       <p className={styles('p')}>
-        <span className={styles('bold')}>Is there an issue with the content on this page?</span>
+        <span className={styles('bold')}>Is there an issue? </span>
         <ExternalLink href={issueUrl} className={styles('link')}>
           Report via GitHub Issue
         </ExternalLink>
       </p>
       {/** TODO: Contributing Guide */}
       <p className={styles('p')}>
-        <span className={styles('bold')}>Would you like to improve/enhance this page?</span>
+        <span className={styles('bold')}>Would you like to contribute? </span>
         <ExternalLink className={styles('link')} href="#">
-          Check out our contribution guidelines.
+          Contribution Guide.
         </ExternalLink>，
         <ExternalLink className={styles('link')} href={`https://github.com/mirrorz-org/mirrorz-help/blob/master/contents/${meta.file}`}>
-          View the source code of this page on GitHub.
+          Source code on GitHub.
         </ExternalLink>
       </p>
       <p className={styles('p')}>
         <span className={styles('bold')}>
-          All content on this page is provided under the terms of the
+          All content is provided under the terms of the
           {' '}
           <ExternalLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" className={styles('link')}>
             CC BY-NC-SA 4.0
