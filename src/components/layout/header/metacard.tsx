@@ -41,7 +41,7 @@ function MetaCard() {
   return (
     <div className={styles('main')}>
       <div className={styles('menu_wrapper')}>
-        <p>选择镜像</p>
+        <p>Select Mirror</p>
         <MirrorSelectMenu />
       </div>
       <div className={styles('switch_wrapper')}>

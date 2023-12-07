@@ -102,12 +102,12 @@ function CodeBlock({
     return (
       <div className={clsx('enhanced-codeblock', styles('container'))}>
         {codeBlockMenu}
-        <Tabs items={[filepath, '快速配置']}>
+        <Tabs items={[filepath, 'Easy Config']}>
           <TabItem value={filepath} xstyle={[styles.code_wrapper]}>
             <LoadingOverlay isLoading={isLoading} />
             <ActualCode code={finalCode} language={codeLanguage} />
           </TabItem>
-          <TabItem value="快速配置" xstyle={[styles.code_wrapper]}>
+          <TabItem value="Easy Config" xstyle={[styles.code_wrapper]}>
             <LoadingOverlay isLoading={isLoading} />
             <ActualCode
               code={buildCatEOF(finalCode, filepath, quickSetupNeedSudo && sudoEnabled)}
