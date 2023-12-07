@@ -161,7 +161,7 @@
       }
     ],
     "mirrors": [
-            {
+      {
         "cname": "alpine",
         "options_name": "alpine",
         "url": "/alpine",
@@ -188,6 +188,15 @@
         "size": "137.72G",
         "help": "/help/debian-security"
       },
+            {
+        "cname": "debian-cd",
+        "options_name": "debian-cd",
+        "url": "/debian-cd",
+        "status": "S1699359892X1699374292",
+        "upstream": "rsync://cdimage.debian.org/debian-cd/",
+        "size": "9.9G",
+        "help": "/help/debian-cd"
+      },
       {
         "cname": "docker-ce",
         "options_name": "docker-ce",
@@ -207,6 +216,24 @@
         "help": "/help/epel"
       },
       {
+        "cname": "mariadb",
+        "options_name": "mariadb",
+        "url": "/mariadb",
+        "status": "S1699349248X1699363648",
+        "upstream": "rsync://rsync.osuosl.org/mariadb/",
+        "size": "513.03G",
+        "help": "/help/mariadb"
+      },
+      {
+        "cname": "rocky",
+        "options_name": "rocky",
+        "url": "/rocky",
+        "status": "S1699349248X1699363648",
+        "upstream": "rsync://ftp.udx.icscoe.jp/rocky/",
+        "size": "513.03G",
+        "help": "/help/rocky"
+      },
+      {
         "cname": "ubuntu",
         "options_name": "ubuntu",
         "url": "/ubuntu",
@@ -223,8 +250,16 @@
         "upstream": "rsync://rsync.releases.ubuntu.com/releases/",
         "size": "41.70G",
         "help": "/help/ubuntu-releases"
+      },
+      {
+        "cname": "ubuntu-ports",
+        "options_name": "ubuntu-ports",
+        "url": "/ubuntu-releases",
+        "status": "S1699357700X1699372100",
+        "upstream": "rsync://ports.ubuntu.com/ubuntu-ports/",
+        "size": "41.70G",
+        "help": "/help/ubuntu-ports"
       }
-    ]
   },
   {
     "site": {
@@ -415,6 +450,15 @@
         "size": "137.72G",
         "help": "/help/debian-security"
       },
+            {
+        "cname": "debian-cd",
+        "options_name": "debian-cd",
+        "url": "/debian-cd",
+        "status": "S1699359892X1699374292",
+        "upstream": "rsync://cdimage.debian.org/debian-cd/",
+        "size": "9.9G",
+        "help": "/help/debian-cd"
+      },
       {
         "cname": "docker-ce",
         "options_name": "docker-ce",
@@ -434,6 +478,24 @@
         "help": "/help/epel"
       },
       {
+        "cname": "mariadb",
+        "options_name": "mariadb",
+        "url": "/mariadb",
+        "status": "S1699349248X1699363648",
+        "upstream": "rsync://rsync.osuosl.org/mariadb/",
+        "size": "513.03G",
+        "help": "/help/mariadb"
+      },
+      {
+        "cname": "rocky",
+        "options_name": "rocky",
+        "url": "/rocky",
+        "status": "S1699349248X1699363648",
+        "upstream": "rsync://ftp.udx.icscoe.jp/rocky/",
+        "size": "513.03G",
+        "help": "/help/rocky"
+      },
+      {
         "cname": "ubuntu",
         "options_name": "ubuntu",
         "url": "/ubuntu",
@@ -450,6 +512,15 @@
         "upstream": "rsync://rsync.releases.ubuntu.com/releases/",
         "size": "41.70G",
         "help": "/help/ubuntu-releases"
+      },
+      {
+        "cname": "ubuntu-ports",
+        "options_name": "ubuntu-ports",
+        "url": "/ubuntu-releases",
+        "status": "S1699357700X1699372100",
+        "upstream": "rsync://ports.ubuntu.com/ubuntu-ports/",
+        "size": "41.70G",
+        "help": "/help/ubuntu-ports"
       }
     ]
   }
