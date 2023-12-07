@@ -12,7 +12,7 @@ export const HttpsSwitch = memo(() => {
   }, [setHttpsEnabled]);
 
   return (
-    <CheckBox checked={httpsEnabled} onChange={handleChange} label="是否启用 HTTPS" />
+    <CheckBox checked={httpsEnabled} onChange={handleChange} label="If Enable HTTPS" />
   );
 });
 
@@ -25,6 +25,6 @@ export const SudoSwitch = memo(() => {
   }, [setSudoEnabled]);
 
   return (
-    <CheckBox checked={sudoEnabled} onChange={handleChange} label="是否使用 sudo" />
+    <CheckBox checked={sudoEnabled} onChange={handleChange} label="If Enable sudo" />
   );
 });
