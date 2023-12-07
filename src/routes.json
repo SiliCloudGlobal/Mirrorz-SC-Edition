@@ -1,18 +1,18 @@
 {
   "/alpine/": {
-    "title": "Alpine Repository",
+    "title": "Alpine Repo",
     "fullTitle": "Alpine Repository Mirror Usage Guide",
     "file": "alpine.mdx",
     "cname": "alpine"
   },
   "/debian/": {
-    "title": "Debian Repository",
+    "title": "Debian Repo",
     "fullTitle": "Debian Repository Mirror Usage Guide",
     "file": "debian.mdx",
     "cname": "debian"
   },
   "/debian-security/": {
-    "title": "Debian Security Repository",
+    "title": "Debian Security Repo",
     "fullTitle": "Debian Security Repository Mirror Usage Guide",
     "file": "debian-security.mdx",
     "cname": "debian-security"
@@ -24,14 +24,14 @@
     "cname": "debian-cd"
   },
   "/docker-ce/": {
-    "title": "Docker CE Repository",
+    "title": "Docker CE Repo",
     "fullTitle": "Docker CE Repository Mirror Usage Guide",
     "file": "docker-ce.mdx",
     "cname": "docker-ce"
   },
 
   "/epel/": {
-    "title": "EPEL Repository",
+    "title": "EPEL Repo",
     "fullTitle": "EPEL Repository Mirror Usage Guide",
     "file": "epel.mdx",
     "cname": "epel"
@@ -43,19 +43,19 @@
     "cname": "mariadb"
   },
   "/rocky/": {
-    "title": "Rocky Linux Repository",
+    "title": "Rocky Linux Repo",
     "fullTitle": "Rocky Linux Repository Mirror Usage Guide",
     "file": "rocky.mdx",
     "cname": "rocky"
   },
   "/ubuntu/": {
-    "title": "Ubuntu Repository",
+    "title": "Ubuntu Repo",
     "fullTitle": "Ubuntu Repository Mirror Usage Guide",
     "file": "ubuntu.mdx",
     "cname": "ubuntu"
   },
   "/ubuntu-ports/": {
-    "title": "Ubuntu Ports Repository",
+    "title": "Ubuntu Ports Repo",
     "fullTitle": "Ubuntu Ports Repository Mirror Usage Guide",
     "file": "ubuntu-ports.mdx",
     "cname": "ubuntu-ports"
