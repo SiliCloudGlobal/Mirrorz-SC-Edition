@@ -153,42 +153,6 @@ export default function HomePage() {
                 Debian Repository Mirror Usage Guide
               </h3>
             </Link>
-            <Link href="/archlinux/" className={styles('card')}>
-              <IconArchLinux className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                Arch Linux Repository Mirror Usage Guide
-              </h3>
-            </Link>
-            <Link href="/fedora/" className={styles('card')}>
-              <IconFedora className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                Fedora Repository Mirror Usage Guide
-              </h3>
-            </Link>
-            <Link href="/opensuse/" className={styles('card')}>
-              <IconOpenSUSE className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                openSUSE Repository Mirror Usage Guide
-              </h3>
-            </Link>
-            <Link href="/centos/" className={styles('card')}>
-              <IconCentOS className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                CentOS Repository Mirror Usage Guide
-              </h3>
-            </Link>
-            <Link href="/gentoo/" className={styles('card')}>
-              <IconGentoo className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                Gentoo Repository Mirror Usage Guide
-              </h3>
-            </Link>
-            <Link href="/pypi/" className={styles('card')}>
-              <IconPython className={styles('brand_icon')} />
-              <h3 className={styles('card_title')}>
-                PyPI Repository Mirror Usage Guide
-              </h3>
-            </Link>
           </div>
         </section>
         {/** TODO: Logo Cloud Section */}
